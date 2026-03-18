@@ -17,7 +17,10 @@
     "url": "https://github.com/okutils/uid/issues"
   },
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
     "./package.json": "./package.json"
   },
   "publishConfig": {
@@ -42,5 +45,8 @@
     "tsdown": "^0.21.3",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"
-  }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts"
 }
