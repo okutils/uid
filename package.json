@@ -1,0 +1,43 @@
+{
+  "name": "@okutils/uid",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A simple and efficient UID generator for JavaScript and TypeScript.",
+  "author": {
+    "email": "narukeu@outlook.com",
+    "name": "Luke Na",
+    "url": "https://narukeu.github.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okutils/uid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okutils/uid/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "bumpp": "^11.0.1",
+    "prettier": "^3.8.1",
+    "tsdown": "^0.21.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
